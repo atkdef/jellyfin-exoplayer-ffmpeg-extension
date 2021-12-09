@@ -33,8 +33,4 @@ jobs:
         if: ${{ startsWith(github.ref, 'refs/tags/v') }}
         run: echo "JELLYFIN_VERSION=$(echo ${GITHUB_REF#refs/tags/v} | tr / -)" >> $GITHUB_ENV
       - name: Build extension and publish library
-        run: ./gradlew :exoplayer-ffmpeg-extension:publish closeAndReleaseSonatypeStagingRepository
-        env:
-          SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
-          OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+        run: ./gradlew :exoplayer-ffmpeg-extension:assembleRelease
