@@ -33,7 +33,7 @@ jobs:
         if: ${{ startsWith(github.ref, 'refs/tags/v') }}
         run: echo "JELLYFIN_VERSION=$(echo ${GITHUB_REF#refs/tags/v} | tr / -)" >> $GITHUB_ENV
       - name: Build aar extension
-        run: ./gradlew :extension-ffmpeg:bundleReleaseAar
+        run: ./gradlew assembleRelease
       - name: Upload aar
         uses: actions/upload-artifact@v2
         with:
