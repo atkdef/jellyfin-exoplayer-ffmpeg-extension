@@ -33,5 +33,5 @@ jobs:
       - name: Upload aar
         uses: actions/upload-artifact@v2
         with:
-          name: exoplayer-ffmpeg
-          path: "exoplayer-extension-ffmpeg"
+          name: upload-exoplayer-ffmpeg 
+          path: "extensions/ffmpeg"
