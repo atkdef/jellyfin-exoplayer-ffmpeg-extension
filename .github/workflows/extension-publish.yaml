@@ -38,4 +38,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: exoplayer-ffmpeg
-          path: "exoplayer-extension-ffmpeg/extensions/ffmpeg/buildout/outputs/"
+          path: "Exoplayer/extensions/ffmpeg/buildout/outputs/"
