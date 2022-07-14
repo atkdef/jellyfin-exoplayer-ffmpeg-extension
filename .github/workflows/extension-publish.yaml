@@ -5,7 +5,7 @@ on:
     tags:
       - v*
     branches:
-      - master
+      - codecs_2.16.1
 
 jobs:
   build:
